@@ -4,10 +4,17 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.cglib.proxy.Proxy;
 
+import javax.management.MBeanServer;
+import javax.management.ObjectName;
+import java.lang.management.ManagementFactory;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * ProfilingHandler Post processor to
+ * handle classes with annotation Profiling.
+ * Plus with MBean parameter.
+ *
  * Created by dkorolev on 4/13/2016.
  */
 public class ProfilingHandlerPostProcessor implements BeanPostProcessor {
@@ -16,6 +23,12 @@ public class ProfilingHandlerPostProcessor implements BeanPostProcessor {
     private Map<String, Class> map = new HashMap<>();
     //controller, which contains flag for JMX.
     private ProfilingController controller = new ProfilingController();
+
+    //register in MBean Server our controller
+    public ProfilingHandlerPostProcessor() throws Exception {
+        MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
+        mBeanServer.registerMBean(controller, new ObjectName("profiling", "name", "controller"));
+    }
 
     // original bean, name is the same
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
