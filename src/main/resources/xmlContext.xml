@@ -7,10 +7,10 @@
 
     <context:annotation-config/>
 
-    <bean class="quoters.ProfilingHandlerPostProcessor"/>
+    <bean class="quoters.bpp.ProfilingHandlerPostProcessor"/>
 
-    <bean class="quoters.InjectRandomIntAnnotationBeanPostProcessor"/>
-    <bean class="quoters.PredefineValueAnnotationBeanPostProcessor"/>
+    <bean class="quoters.bpp.InjectRandomIntAnnotationBeanPostProcessor"/>
+    <bean class="quoters.bpp.PredefineValueAnnotationBeanPostProcessor"/>
 
     <bean class="quoters.TerminatorQuoter" id="terminatorQuoter">
         <property name="message" value="I'll be back"/>
