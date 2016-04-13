@@ -1,8 +1,9 @@
-package quoters;
+package quoters.bpp;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.util.ReflectionUtils;
+import quoters.annotations.PredefineValue;
 
 import java.lang.reflect.Field;
 

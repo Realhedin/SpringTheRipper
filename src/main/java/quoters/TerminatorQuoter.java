@@ -1,5 +1,9 @@
 package quoters;
 
+import quoters.annotations.InjectRandomInt;
+import quoters.annotations.PredefineValue;
+import quoters.annotations.Profiling;
+
 import javax.annotation.PostConstruct;
 
 /**
@@ -7,6 +11,7 @@ import javax.annotation.PostConstruct;
  *
  * Created by dkorolev on 4/12/2016.
  */
+@Profiling
 public class TerminatorQuoter implements Quoter {
 
     @InjectRandomInt(min = 2, max =7)
