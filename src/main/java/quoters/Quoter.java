@@ -8,4 +8,6 @@ package quoters;
 public interface Quoter {
 
     String sayQuote();
+
+    int getRepeat();
 }

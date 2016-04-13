@@ -25,4 +25,9 @@ public class TerminatorQuoterTest {
         Assert.assertNotNull(quoter);
         Assert.assertEquals("I'll be back", quoter.sayQuote());
     }
+
+    @Test
+    public void testGetRepeat() throws Exception {
+        Assert.assertTrue(quoter.getRepeat() >= 2);
+    }
 }

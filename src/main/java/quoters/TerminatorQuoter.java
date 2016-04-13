@@ -32,6 +32,9 @@ public class TerminatorQuoter implements Quoter {
     }
 
 
+    public int getRepeat() {
+        return repeat;
+    }
 
     public String getMessage() {
         return message;
