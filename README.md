@@ -6,3 +6,4 @@ Practice from Spring the Ripper lectures by Evgenii Borisov.
 2. Added new InjectRandomInt annotation and Bean Post Processor for it.
 3. 2 phase constructor.
 4. Added PredefineValue annotation and Bean Post Processor for it.
+5. Added Profiling annotation and BPP and MBean parameter for JMX.
