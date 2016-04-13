@@ -20,14 +20,31 @@ public class TerminatorQuoterTest {
         quoter = context.getBean(Quoter.class);
     }
 
+    /**
+     * Simple test spring annotation for bean.
+     * @throws Exception
+     */
     @Test
     public void testSayQuote() throws Exception {
         Assert.assertNotNull(quoter);
         Assert.assertEquals("I'll be back", quoter.sayQuote());
     }
 
+    /**
+     * Test InjectRandomIntAnnotationBeanPostProcessor.
+     * @throws Exception
+     */
     @Test
     public void testGetRepeat() throws Exception {
         Assert.assertTrue(quoter.getRepeat() >= 2);
+    }
+
+    /**
+     * Test PredefineValueAnnotationBeanPostProcessor.
+     * @throws Exception
+     */
+    @Test
+    public void testGetPredefinedString() throws Exception {
+        Assert.assertEquals("Come and get it",quoter.getPredefinedString());
     }
 }

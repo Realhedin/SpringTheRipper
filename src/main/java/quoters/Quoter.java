@@ -10,4 +10,6 @@ public interface Quoter {
     String sayQuote();
 
     int getRepeat();
+
+    String getPredefinedString();
 }
