@@ -7,7 +7,7 @@ package quoters.mBean;
  * Created by dkorolev on 4/13/2016.
  */
 public class ProfilingController implements ProfilingControllerMBean {
-    private boolean enabled;
+    private boolean enabled = true;
 
 
     public boolean isEnabled() {
