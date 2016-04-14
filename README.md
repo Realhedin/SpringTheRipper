@@ -29,3 +29,8 @@ Practice from Spring the Ripper lectures by Evgenii Borisov.
     Added PostProxy annotation and ContextListener for it on ContextRefreshedEvent.
     This is 3 phase constructor which takes place after BPP.
     So beans are completely ready to use when ContextRefreshedEvent is called.
+
+7. Added DeprecatedClass annotation and DeprecationHandlerBeanFactoryPostProcessor for it.
+    Allows to change beanDefinitions by BeanFactoryPostProcessor before any beans are created.
+    (In our example, it changes name and as a result - another bean will be created)
+    [currently commented annotation in TerminatorQuoter]
