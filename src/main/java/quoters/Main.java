@@ -11,10 +11,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("xmlContext.xml");
-        while (true) {
-            Thread.sleep(1000);
-            Quoter quoter = context.getBean(Quoter.class);
-            quoter.sayQuote();
-        }
+//            Quoter quoter = context.getBean(Quoter.class);
+//            quoter.sayQuote();
     }
 }

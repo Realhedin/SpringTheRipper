@@ -1,6 +1,7 @@
 package quoters;
 
 import quoters.annotations.InjectRandomInt;
+import quoters.annotations.PostProxy;
 import quoters.annotations.PredefineValue;
 import quoters.annotations.Profiling;
 
@@ -32,7 +33,9 @@ public class TerminatorQuoter implements Quoter {
         System.out.println("Phase 1");
     }
 
+    @PostProxy
     public String sayQuote() {
+        System.out.println("Phase 3");
         for (int i = 0; i < repeat; i++) {
             System.out.println("Message: " + message);
         }
