@@ -1,7 +1,5 @@
 package screensaver;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
@@ -12,10 +10,7 @@ import java.util.Random;
  * Created by dkorolev on 4/16/2016.
  */
 @org.springframework.stereotype.Component
-public class ColorFrame extends JFrame {
-
-    @Autowired
-    private Color color;
+public abstract class ColorFrame extends JFrame {
 
     public ColorFrame()  {
         setSize(200, 200);
@@ -31,8 +26,18 @@ public class ColorFrame extends JFrame {
         Random random = new Random();
         setLocation(random.nextInt(1200), random.nextInt(700));
         //set color of frame
-        getContentPane().setBackground(color);
+        getContentPane().setBackground(getColor());
         //change color
         repaint();
     }
+
+    /**
+     * Abstract method for solution
+     * how to inject Prototype into Singleton.
+     * Implementation inside Java Config to be able
+     * to use Context in a right way.
+     *
+     * @return Color object.
+     */
+    protected abstract Color getColor();
 }
