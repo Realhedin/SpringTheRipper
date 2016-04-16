@@ -34,3 +34,7 @@ Practice from Spring the Ripper lectures by Evgenii Borisov.
     Allows to change beanDefinitions by BeanFactoryPostProcessor before any beans are created.
     (In our example, it changes name and as a result - another bean will be created)
     [currently commented annotation in TerminatorQuoter]
+
+8. Added Screensaver using Spring.
+    Allows to create a window with random position on a monitor with random changing color.
+    (in commits - 2 solutions and the last is right one how to inject prototype into singleton)
