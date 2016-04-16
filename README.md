@@ -38,3 +38,7 @@ Practice from Spring the Ripper lectures by Evgenii Borisov.
 8. Added Screensaver using Spring.
     Allows to create a window with random position on a monitor with random changing color.
     (in commits - 2 solutions and the last is right one how to inject prototype into singleton)
+
+9. Added new Scope "periodical".
+    Created PeriodicalScopeConfigurer for logic and CustomScopeRegistryBeanFactoryPostProcessor
+       for registering this scope in context.
